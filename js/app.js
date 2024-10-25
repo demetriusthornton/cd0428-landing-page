@@ -1,106 +1,161 @@
 /**
+ *
+ * Manipulating the DOM exercise.
+ * Exercise programmatically builds navigation,
+ * scrolls to anchors from navigation,
+ * and highlights section in viewport upon scrolling.
+ *
+ * Dependencies: None
+ *
+ * JS Version: ES2015/ES6
+ *
+ * JS Standard: ESlint
+ *
+ */
+
+/**
+ * Comments should be present at the beginning of each procedure and class.
+ * Great to have comments before crucial code sections within the procedure.
+ */
+
+/**
  * Define Global Variables
- */
-const sections = document.querySelectorAll('.section');
-const navContainer = document.querySelector('.page__header');
-
-/**
- * Helper Functions
+ *
  */
 
 /**
- * isElementInViewport - Checks if the given element is in the viewport
- * @param {Element} el - The element to check
- * @returns {boolean} - True if element is in viewport
- */
-const isElementInViewport = (el) => {
-    const rect = el.getBoundingClientRect();
-    return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-};
-
-/**
- * Main Functions
+ * End Global Variables
+ * Start Helper Functions
+ *
  */
 
 /**
- * buildNav - Builds the navigation menu dynamically based on sections
+ * End Helper Functions
+ * Begin Main Functions
+ *
+ */
+
+// build the nav
+
+// Add class 'active' to section when near top of viewport
+
+// Scroll to anchor ID using scrollTO event
+
+/**
+ * End Main Functions
+ * Begin Events
+ *
+ */
+
+// Build menu
+
+// Scroll to section on link click
+
+// Set sections as active
+
+/**
+ * @desc Gets the navigation container element from the DOM
+ * @param void - no parameters required
+ * @return {HTMLElement} - The navigation list container element
+ */
+const navList = document.getElementById("navbar__list");
+
+/**
+ * @desc Gets all section elements from the DOM
+ * @param void - no parameters required
+ * @return {NodeList} - List of all section elements
+ */
+const sections = document.querySelectorAll("section");
+
+/**
+ * @desc Builds the navigation menu dynamically from sections
+ * @param void - no parameters required
+ * @return void - no return value
  */
 function buildNav() {
-    // Create the navigation container
-    const navList = document.createElement('nav');
-    const ul = document.createElement('ul');
-    ul.setAttribute('id', 'navbar__list');
-    
-    // Create navigation items for each section
-    sections.forEach((section) => {
-        const li = document.createElement('li');
-        const navText = section.getAttribute('nav');
-        const sectionId = section.getAttribute('id');
-        
-        li.innerHTML = `<a class="menu__link" href="#${sectionId}">${navText}</a>`;
-        ul.appendChild(li);
+  /**
+   * @desc Creates a document fragment for better performance
+   * @type {DocumentFragment}
+   */
+  const fragment = document.createDocumentFragment();
+
+  sections.forEach((section) => {
+    const listItem = document.createElement("li");
+    const link = document.createElement("a");
+
+    /**
+     * @desc Gets section identifier and title from attributes
+     * @type {string}
+     */
+    const sectionId = section.getAttribute("id");
+    const sectionTitle = section.getAttribute("data-nav");
+
+    // Set link attributes
+    link.innerHTML = sectionTitle;
+    link.setAttribute("href", `#${sectionId}`);
+    link.classList.add("menu__link");
+
+    /**
+     * @desc Adds smooth scrolling behavior to navigation links
+     * @param {Event} e - The click event object
+     * @return void - no return value
+     */
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      section.scrollIntoView({
+        behavior: "smooth",
+      });
     });
-    
-    navList.appendChild(ul);
-    navContainer.appendChild(navList);
+
+    // Build DOM structure
+    listItem.appendChild(link);
+    fragment.appendChild(listItem);
+  });
+
+  navList.appendChild(fragment);
 }
 
 /**
- * setActiveSection - Adds 'active' class to section when it's in viewport
+ * @desc Updates the active section based on viewport position
+ * @param void - no parameters required
+ * @return void - no return value
  */
 function setActiveSection() {
-    sections.forEach(section => {
-        if (isElementInViewport(section)) {
-            // Remove active class from all sections first
-            sections.forEach(s => s.classList.remove('your-active-class'));
-            // Add active class to current section
-            section.classList.add('your-active-class');
-            
-            // Update active state in navigation
-            const navLinks = document.querySelectorAll('.menu__link');
-            navLinks.forEach(link => {
-                if (link.getAttribute('href') === `#${section.id}`) {
-                    link.classList.add('active');
-                } else {
-                    link.classList.remove('active');
-                }
-            });
-        }
-    });
-}
+  sections.forEach((section) => {
+    /**
+     * @desc Gets the section's position relative to viewport
+     * @type {DOMRect}
+     */
+    const rect = section.getBoundingClientRect();
+    const navLink = document.querySelector(`a[href="#${section.id}"]`);
 
-/**
- * scrollToSection - Handles smooth scrolling to section
- * @param {Event} e - Click event
- */
-function scrollToSection(e) {
-    if (e.target.classList.contains('menu__link')) {
-        e.preventDefault();
-        const targetId = e.target.getAttribute('href').substring(1);
-        const targetSection = document.getElementById(targetId);
-        
-        targetSection.scrollIntoView({
-            behavior: 'smooth'
-        });
+    // Check if section is in viewport
+    if (rect.top >= 0 && rect.top <= 150) {
+      // Update active states
+      sections.forEach((s) => s.classList.remove("your-active-class"));
+      section.classList.add("your-active-class");
+
+      document.querySelectorAll(".menu__link").forEach((link) => {
+        link.classList.remove("active");
+      });
+      navLink.classList.add("active");
     }
+  });
 }
 
 /**
- * Begin Events
+ * @desc Initializes the navigation when DOM is loaded
+ * @param void - no parameters required
+ * @return void - no return value
  */
+ddocument.addEventListener("DOMContentLoaded", () => {
+  buildNav();
+  setActiveSection();
+});
 
-// Build the navigation menu when DOM content is loaded
-document.addEventListener('DOMContentLoaded', buildNav);
-
-// Handle smooth scrolling when clicking navigation links
-document.querySelector('.page__header').addEventListener('click', scrollToSection);
-
-// Update active section while scrolling
-window.addEventListener('scroll', setActiveSection);
-
-document.getel
+/**
+ * @desc Tracks scroll position to update active section
+ * @param void - no parameters required
+ * @return void - no return value
+ */
+document.addEventListener("scroll", setActiveSection);
