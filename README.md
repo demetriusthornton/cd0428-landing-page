@@ -2,8 +2,8 @@
 
 ## Instructions
 
-The starter project has some HTML and CSS styling to display a static version of the Landing Page project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
+Udacity Landing Page Project about the matrix, using HTML, CSS and Javascript.
 
-To get started, open `js/app.js` and start building out the app's functionality
+## How to run
 
-For specific, detailed instructions, look at the project instructions in the Udacity Classroom.
+For this project you need to open the index.html file in your browser. This will open the page and you can navigate through the page using the navigation bar.

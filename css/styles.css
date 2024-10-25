@@ -24,14 +24,14 @@ body {
 /* Typeography General*/
 h1 {
   font-family: "Fira Sans", sans-serif;
-  font-size: 3em;
+  font-size: 7em;
   margin: 2em 1rem;
 }
 
 @media only screen and (min-width: 35em) {
   h1 {
-    font-size: 7em;
-    margin: 2em 4rem 1em;
+    font-size: 6em;
+    margin: -2em 4rem 1em;
   }
 }
 
@@ -43,7 +43,7 @@ h2 {
 }
 
 p {
-  line-height: 1.6em;
+  line-height: 1.5em;
   color: #eee;
 }
 
@@ -59,14 +59,14 @@ main {
 
 section {
   position: relative;
-  min-height: 80vh;
+  min-height: 60vh;
 }
 
 /* ---- Module Rules ---- */
 
 /* Navigation Styles*/
 .navbar__menu ul {
-  padding-left: 0;
+  padding: 15 0;
   margin: 0;
   text-align: center;
 }
@@ -89,6 +89,40 @@ section {
   transition: ease 0.3s all;
 }
 
+img {
+  width: 100%;
+  height: 80vh;
+  padding-bottom: 0px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
+  font-size: 1.5em;
+}
+
+.social-links ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 1em; /* Adds space between icons */
+}
+
+.social-links .fa-facebook {
+  color: #fff;
+}
+
+.social-links .fa-instagram {
+  color: #fff;
+}
+
+.social-links .fa-twitter {
+  color: #1da1f2;
+}
+
 /* Header Styles */
 .page__header {
   background: #fff;
@@ -107,6 +141,8 @@ section {
 
 .page__footer p {
   color: #fff;
+  text-align: center;
+  font-size: 1.5em;
 }
 
 /* ---- Theme Rules ---- */

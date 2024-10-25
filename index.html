@@ -13,6 +13,10 @@
     <!-- Load Styles -->
     <link href="css/styles.css" rel="stylesheet" />
     <script src="js/app.js" type="text/javascript"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
   </head>
   <body>
     <!-- HTML Follows BEM naming conventions 
@@ -21,16 +25,21 @@
       <nav class="navbar__menu">
         <!-- Navigation starts as empty UL that will be populated with JS -->
         <ul id="navbar__list">
-          <li><a href="#section1" class="menu__link">Section 1</a></li>
-          <li><a href="#section2" class="menu__link">Section 2</a></li>
-          <li><a href="#section3" class="menu__link">Section 3</a></li>
-          <li><a href="#section4" class="menu__link">Section 4</a></li>
+          <li><a href="#section1" class="menu__link">About Neo</a></li>
+          <li><a href="#section2" class="menu__link">About Trinity</a></li>
+          <li><a href="#section3" class="menu__link">About Morpheus</a></li>
+          <li><a href="#section4" class="menu__link">About Smith</a></li>
         </ul>
       </nav>
     </header>
     <main>
       <header class="main__hero">
-        <h1>Landing Page</h1>
+        <img
+          src="assets/pexels-markusspiske-1089438.jpg"
+          alt="Matrix"
+          class="landing__container__img"
+        />
+        <h1>Enter The Matrix</h1>
       </header>
       <!-- Each Section has an ID (used for the anchor) and 
     a data attribute that will populate the li node.
@@ -38,117 +47,175 @@
     The first section is set to active class by default -->
       <section id="section1" data-nav="Section 1" class="your-active-class">
         <div class="landing__container">
-          <img
-            src="https://unsplash.com/photos/monitor-showing-java-programming-OqtafYT5kTw"
-            alt="img1"
-            class="landing__container__img"
-          />
-
-          <h2>Section 1</h2>
+          <h2>NEO</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-            fermentum metus faucibus lectus pharetra dapibus. Suspendisse
-            potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget
-            lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed
-            convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla
-            eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam
-            nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis
-            lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a
-            tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus
-            vitae elit. Integer nec libero venenatis libero ultricies molestie
-            semper in tellus. Sed congue et odio sed euismod.
+            Neo, born as Thomas Anderson, is the protagonist of The Matrix
+            franchise. Initially leading a mundane life as a computer
+            programmer, he moonlights as a hacker under the alias "Neo." His
+            life takes a dramatic turn when he is contacted by Morpheus, a
+            mysterious figure who reveals the truth about the Matrix—a simulated
+            reality created to enslave humanity. Neo's journey from an ordinary
+            individual to "The One" is central to the series.
           </p>
-
           <p>
-            Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar
-            gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam.
-            Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum
-            consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget
-            elementum tortor mollis non.
+            Neo is characterized by his quiet and introspective nature. He is
+            more of a thinker than a talker, often contemplating his place in
+            the world and the nature of reality. Despite his initial skepticism,
+            Neo quickly adapts to his new role, learning martial arts and other
+            skills necessary to fight against the machines. His ability to
+            manipulate the Matrix's code grants him superhuman powers, such as
+            dodging bullets and flying, making him a formidable force against
+            the agents.
+          </p>
+          <p>
+            His relationship with Trinity, a fellow rebel, plays a significant
+            role in his development. Guided by love and destiny, Neo's
+            connection with Trinity gives him strength and motivation.
+            Throughout the series, he grapples with living up to Morpheus'
+            belief that he is the savior of humanity.
+          </p>
+          <p>
+            Neo's personality evolves from a reluctant hero to a selfless leader
+            willing to sacrifice himself for the greater good. His final
+            confrontation with Agent Smith underscores his growth, as he
+            embraces his role in ending the war between humans and machines.
+            Neo's journey is one of self-discovery and acceptance, culminating
+            in his ultimate act of heroism that brings peace to both worlds.
           </p>
         </div>
       </section>
       <section id="section2" data-nav="Section 2">
         <div class="landing__container">
-          <h2>Section 2</h2>
+          <h2>TRINITY</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-            fermentum metus faucibus lectus pharetra dapibus. Suspendisse
-            potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget
-            lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed
-            convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla
-            eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam
-            nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis
-            lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a
-            tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus
-            vitae elit. Integer nec libero venenatis libero ultricies molestie
-            semper in tellus. Sed congue et odio sed euismod.
+            Trinity is a key figure in *The Matrix* series, renowned for her
+            skills as a hacker and warrior. Initially introduced as a mysterious
+            and formidable ally of Morpheus, she plays a crucial role in
+            liberating Neo from the Matrix. Her reputation precedes her; she
+            famously cracked an unbreakable database, earning her respect among
+            hackers worldwide.
           </p>
-
           <p>
-            Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar
-            gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam.
-            Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum
-            consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget
-            elementum tortor mollis non.
+            Living aboard the hovercraft *Nebuchadnezzar*, Trinity serves as
+            Morpheus's trusted second-in-command. Her expertise extends beyond
+            hacking; she is an accomplished martial artist and marksman, known
+            for her iconic line "Dodge this" before dispatching enemies with
+            precision. Her combat prowess makes her an invaluable asset in the
+            fight against the machines.
+          </p>
+          <p>
+            Trinity's character is marked by her boldness and unwavering
+            commitment to the cause. She is fiercely loyal to Morpheus and
+            deeply invested in the prophecy of The One. Her relationship with
+            Neo becomes central to her narrative arc; she falls in love with
+            him, fulfilling a prophecy foretold by The Oracle.
+          </p>
+          <p>
+            Despite her tough exterior, Trinity exhibits vulnerability through
+            her love for Neo. This relationship humanizes her character and
+            underscores her willingness to sacrifice for the greater good. Her
+            journey is one of empowerment and resilience as she navigates the
+            challenges of living in both the real world and the simulated
+            reality of the Matrix.
           </p>
         </div>
       </section>
       <section id="section3" data-nav="Section 3">
         <div class="landing__container">
-          <h2>Section 3</h2>
+          <h2>MORPHIUS</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-            fermentum metus faucibus lectus pharetra dapibus. Suspendisse
-            potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget
-            lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed
-            convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla
-            eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam
-            nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis
-            lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a
-            tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus
-            vitae elit. Integer nec libero venenatis libero ultricies molestie
-            semper in tellus. Sed congue et odio sed euismod.
+            Morpheus is the charismatic leader of the human resistance against
+            the machines in *The Matrix*. As captain of the hovercraft
+            *Nebuchadnezzar*, he dedicates his life to freeing humanity from
+            enslavement within the simulated reality of the Matrix. His belief
+            in The One—a prophesied savior who will end the war—drives much of
+            his actions throughout the series.
           </p>
-
           <p>
-            Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar
-            gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam.
-            Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum
-            consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget
-            elementum tortor mollis non.
+            Morpheus is portrayed as both a revolutionary leader and a mentor
+            figure. His combat skills are exceptional; he possesses superhuman
+            strength and agility within the Matrix, making him one of its
+            toughest fighters. As a sensei, he trains new recruits like Neo in
+            martial arts and strategic thinking, preparing them for battles
+            against Agents.
+          </p>
+          <p>
+            His faith in Neo is unwavering; he sees him as The One destined to
+            fulfill the prophecy. This belief sometimes puts him at odds with
+            others but underscores his dedication to the cause. Morpheus's
+            philosophical approach often involves challenging perceptions of
+            reality, encouraging others to question their surroundings.
+          </p>
+          <p>
+            Despite facing numerous challenges and betrayals, Morpheus remains
+            steadfast in his mission. He embodies hope and resilience, inspiring
+            those around him to fight for freedom. His leadership style balances
+            authority with empathy, making him both respected and revered among
+            his crew.
           </p>
         </div>
       </section>
       <section id="section4" data-nav="Section 4">
         <div class="landing__container">
-          <h2>Section 4</h2>
+          <h2>AGENT SMITH</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-            fermentum metus faucibus lectus pharetra dapibus. Suspendisse
-            potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget
-            lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed
-            convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla
-            eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam
-            nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis
-            lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a
-            tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus
-            vitae elit. Integer nec libero venenatis libero ultricies molestie
-            semper in tellus. Sed congue et odio sed euismod.
+            Agent Smith serves as the primary antagonist in *The Matrix*
+            franchise. Initially an Agent program designed to maintain order
+            within the Matrix by eliminating threats like rogue humans or
+            programs, Smith possesses superhuman abilities such as speed,
+            strength, and agility. His defining trait is his relentless pursuit
+            of control over both the Matrix and its inhabitants.
           </p>
-
           <p>
-            Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar
-            gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam.
-            Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum
-            consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget
-            elementum tortor mollis non.
+            Smith's character evolves significantly throughout the series. After
+            being defeated by Neo at the end of the first film, he becomes
+            disconnected from machine control and transforms into a rogue
+            program with self-replicating abilities akin to a virus. This
+            newfound autonomy allows him to copy himself onto other entities
+            within the Matrix, creating an army of clones that share his
+            consciousness.
+          </p>
+          <p>
+            Smith's motivations are complex; he expresses disdain for humanity
+            and desires freedom from what he perceives as imprisonment within
+            the Matrix itself. His conflict with Neo becomes personal as they
+            are revealed to be opposites—two sides of an equation seeking
+            balance.
+          </p>
+          <p>
+            As Smith gains power—eventually assimilating even The Oracle—his
+            threat extends beyond virtual boundaries into reality itself when he
+            takes over human bodies like Bane’s outside of cyberspace.
+            Ultimately defeated by Neo’s sacrifice during their final
+            confrontation inside Machine City’s core network hub (the Source),
+            Smith represents unchecked ambition driven by existential angst—a
+            cautionary tale about losing oneself amidst power struggles without
+            purpose or direction beyond domination alone.
           </p>
         </div>
       </section>
     </main>
     <footer class="page__footer">
       <p>&copy Udacity</p>
+      <div class="social-links">
+        <ul>
+          <li>
+            <a href="https://www.facebook.com/matrixmovieuk/"
+              ><i class="fab fa-facebook"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/thematrixmovie/?hl=en"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://x.com/thematrixmovie?lang=en"
+              ><i class="fab fa-twitter"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
     </footer>
   </body>
 </html>
