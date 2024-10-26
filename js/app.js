@@ -1,9 +1,9 @@
 /**
  * @desc Gets the navigation container element from the DOM
- * @param void - no parameters required
+ * @param - no parameters required
  * @return {HTMLElement} - The navigation list container element
  */
-const navList = document.getElementById("navbar__list");
+const navList = document.getElementById("navbar_list");
 
 /**
  * @desc Gets all section elements from the DOM
@@ -30,7 +30,6 @@ function buildNav() {
 
     /**
      * @desc Gets section identifier and title from attributes
-    
      */
     const sectionId = section.getAttribute("id");
     const sectionTitle = section.getAttribute("data-nav");
@@ -79,7 +78,6 @@ function setActiveSection() {
       // Update active states
       sections.forEach((s) => s.classList.remove("your-active-class"));
       section.classList.add("your-active-class");
-
       document.querySelectorAll(".menu__link").forEach((link) => {
         link.classList.remove("active");
       });
@@ -93,7 +91,7 @@ function setActiveSection() {
  * @param void - no parameters required
  * @return void - no return value
  */
-ddocument.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
   buildNav();
   setActiveSection();
 });
