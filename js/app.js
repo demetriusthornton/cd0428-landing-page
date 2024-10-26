@@ -3,9 +3,9 @@
  * @param - no parameters required
  * @return {HTMLElement} - The navigation list container element
  */
-const navList = document.getElementById("navbar_list");
+const navList = document.getElementById("navbar__list");
 
-/**
+/**ß
  * @desc Gets all section elements from the DOM
  * @param void - no parameters required
  * @return {NodeList} - List of all section elements
